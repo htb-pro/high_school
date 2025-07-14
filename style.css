@@ -1,0 +1,886 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+}
+body
+{
+    background-color:white;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(4,auto);
+    row-gap: 10px;
+}
+header
+{
+    width: 100vw;
+    height: 5vh;
+    position: fixed;
+    background:rgb(2, 2, 65);
+    border-radius: 10px;
+    z-index: 1;
+}
+header::before
+{
+    content: "";
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    border-bottom-right-radius: 50px;
+    background-color: yellow;
+}
+header::after
+{
+    content: "";
+    position: absolute;
+    right: 0px;
+    width: 25%;
+    height: 100%;
+    border-top-left-radius: 50px;
+    background-color: yellow;
+}
+header span 
+{
+    display: none;
+}
+.toggle_bars
+{
+    display: none;
+}
+.nav
+{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    margin-left: 30%;
+}
+
+.nav a 
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 22px;
+    text-decoration: none;
+    color: white;
+    margin-right: 10px;
+}
+.nav a:hover
+{
+    color: red;
+}
+section
+{
+    width: 100vw;
+    height: 85vh;
+    position: relative;
+    background-image: url('Pictures/Pngtree_education\ training\ \ school.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 2rem;
+}
+section::before
+{
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    background:rgb(2, 2, 65,0.8); 
+    /* background-image:linear-gradient(to right,rgb(2, 2, 65) 55%,transparent 90%); */
+}
+
+.content
+{ /*le style du contenu de la section*/
+    width: 35vw;
+    height: auto;
+    margin: 3rem 6rem; 
+    transition: all 1.0s ease;
+    animation:  margin_decal 1s ;
+    position: relative;
+    font-size: 20px;
+    color: rgb(177, 176, 176);
+    background-color: rgba(2, 2, 65, 0.621);
+    border-radius: 10px;
+    padding: 20px;
+}
+@keyframes margin_decal {
+    from{
+         margin: 3rem 1rem;
+    }
+    to{
+         margin: 3rem 6rem;
+    }
+}
+.content > span
+{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 60px;
+    color: yellow;
+    text-align: center;
+}
+.content .text
+{
+        text-align: left;
+}
+.content p .secondPart
+{
+    color: yellow;
+}
+.contentForm
+{
+    width: 15rem;
+    height: 3rem;
+    background-color: yellow;
+    border-radius: 20px;
+    position: relative;
+    margin-top: 10px;
+    color: black;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+.contentForm span 
+{
+    position: relative;
+    top: 7.5px;
+    font-size: 25px;
+    align-items: center;
+}
+
+.subscribeNotice
+{
+    width: 25vw;
+    height: 50vh;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.457);
+    color: white;
+    position: absolute;
+    left: 5rem;
+    top: 2.5rem;
+    transition: all 0.5s;
+    text-align: center;
+    font-size: 22px;
+    border-radius: 10px;
+    padding-bottom: 1rem;
+}
+.subscribeNotice h3
+{
+    font-size: 25px;
+    color: yellow;
+    margin-top: 2rem;
+}
+.button 
+{
+     width: auto;
+    height: 3vh;
+    padding: 5px;
+    position: relative;
+    top: 2rem;
+    margin-top: 2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    color: yellow;
+    background-color: rgb(2,2,65);
+}
+.button:hover
+{
+    background-color: yellow;
+    color: black;
+}
+.sectionContainer
+{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    flex-direction: row;
+    background-color: white;
+}
+.sectionContainer h2
+{
+    width: 10vw;
+    height: auto;
+    background-color: yellow;
+    position: absolute;
+    text-align: center;
+    left: 0px;
+}
+.sectionContainer   .indication1
+{
+    width: auto;
+    height: 2rem;
+    padding: 5px;
+    cursor: pointer;
+    border: 1px solid yellow;
+    background-color: yellow;
+    position: absolute;
+    font-size: 25px;
+    left: 15%;
+    top: 5rem;
+    display: none;
+}
+.sectionContainer   .indication2
+{
+    width: auto;
+    height: 2rem;
+    padding: 5px;
+    cursor: pointer;
+    border: 1px solid yellow;
+    background-color: yellow;
+    position: absolute;
+    font-size: 25px;
+    right: 15%;
+    top: 5rem;
+}
+.firstSection,.secondSection,.thirdSection
+{
+    width: 50vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+}
+.secondSection,.thirdSection
+{
+    display: none;/*la disparition des autres formes*/
+}
+.firstSection .firstSectionImage
+{
+    width: 25vw;
+    height: 50vh;
+    background-image: url('Pictures/maternel.png');
+    background-color: rgba(0, 0, 0, 0.237);
+    background-position: 0 -15px;
+    background-size: cover;
+    object-fit: cover;
+}
+
+.firstSectionContent,.secondSectionContent,.thirdSectionContent
+{
+    width: 25vw;
+    height: 50vh;
+    background-color: rgb(2, 2, 65);
+}
+ .firstSectionContent h3
+{/*stylisation du titre h3*/
+    font-size: 22px;
+    color: yellow;
+    text-align: center;
+    margin-top: 1rem;
+}
+.secondSectionContent h3
+{/*stylisation du titre h3*/
+    font-size: 22px;
+    color: yellow;
+    text-align: center;
+    margin-top: 1rem;
+}
+.thirdSectionContent h3
+{/*stylisation du titre h3*/
+    font-size: 22px;
+    color: yellow;
+    text-align: center;
+    margin-top: 1rem;
+}
+.firstSectionContent p
+{/*stylisation du titre p*/
+        font-size: 20px;
+        color: white;
+        margin-left: 10px;
+}
+.secondSectionContent p
+{/*stylisation du titre p*/
+        font-size: 20px;
+        color: white;
+        margin-left: 10px;
+}
+
+.thirdSectionContent p
+{/*stylisation du titre p*/
+        font-size: 20px;
+        color: white;
+        margin-left: 10px;
+}
+.secondSection .secondSectionImage
+{
+    width: 25vw;
+    height: 50vh;
+    background-image: url('Pictures/eleve_de_primaire.png');
+    background-size: cover;
+    background-position: -1rem 0;
+    object-fit: cover;
+}
+.thirdSection .thirdSectionImage
+{
+    width: 25vw;
+    height: 50vh;
+    background-image: url('Pictures/eleve.png');
+    background-size: cover;
+    background-position: -4rem 0;
+    object-fit: cover;
+}
+/*------Style des options*/
+
+.optionsContainer
+{
+    width: 100vw;
+    height: 35vh;
+    display: flex;
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom:1rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.optionsContainer h2
+{
+    width: 10vw;
+    height: auto;
+    background-color: yellow;
+    position: absolute;
+    text-align: center;
+    left: 0px;
+    top: 0px;
+}
+
+.optionsContainer > span
+{
+    width: 4rem;
+    position: absolute;
+    top: 2rem;
+    left: 10px;
+}
+
+.optionsContainer .FO1
+{
+    margin-left: 2rem;
+}
+.optionsContainer ~ .Option
+{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    transition: all 1s;
+    position: relative;
+}
+
+.optionsContainer .Option .formImage span
+{
+    color:  white;
+    background-color: rgba(0, 0, 0, 0.701);
+    padding: 1px;
+    border-radius: 2px;
+    z-index: 1;
+}
+.optionsContainer .Option .formImage
+{/*styliser les images*/
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    cursor: pointer;
+    border-radius: 50%;
+    margin-left: 20px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background-color: white;/*couvre l'arriere plan pour bien le before de formIamge*/
+}
+.optionsContainer .Option .F1
+{
+    background-image: url('Pictures/pedagogie.png');
+}
+.optionsContainer .Option .F2
+{
+    background-image: url('Pictures/scientific.png');
+}
+.optionsContainer .Option .F3
+{
+    
+    background-image: url('Pictures/graph-of-a-function-mathematics-triangle-polynomial-mathematics-bdc9a347e27ee35da1e56e82450dc198.png');
+}
+.optionsContainer .Option .F4
+{
+    background-image: url('Pictures/commercial.png');
+}
+.optionsContainer .Option .F5
+{
+    background-image: url('Pictures/information-technology-company-cisco-systems-industry-mechanic-55549d089a37f152cfee1624ccd90480.png');
+}
+.optionsContainer .Option .F6
+{
+    background-image: url('Pictures/electricity.png');
+}
+.optionsContainer .Option .F7
+{
+    background-image: url('Pictures/couture.png');
+}
+.formImage::before
+{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    translate: 1% 1%;
+    rotate: -10deg;
+    background-image: conic-gradient( yellow 60%, white 25%);
+    padding: 7px;
+    z-index: -1;
+}
+.formImage::after
+{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: rgba(2, 2, 65, 0.589);
+}
+ .presentation
+{
+    width: 150px;
+    height: 150px;
+    display: none;
+    padding-top: 1rem;
+    text-align: center;
+    color: black;
+    margin-left: 15px;
+    border-radius: 10px;
+    transition: all 0.5s;
+    background-color: rgba(233, 249, 7, 0.518);
+ } 
+ .presentation h3
+{
+    color: rgb(2,2,65);
+}
+.Option.infOption .presentation
+{/*le style de l'element presentation a l'insertion de la classe infoMember*/
+    display: block;
+}
+
+.Option.infOption .formImage
+{/*le style de l'element presentation a l'insertion de la classe infoMember*/
+    transition: all 1s;
+    margin-right: 5px;
+    display: none;
+}
+
+footer
+{ /*le bas de la page*/
+	position : relative;
+	width: 100vw;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+    color:rgb(177, 176, 176);
+	background-color : rgb(2, 2, 65);
+}
+footer .contact 
+{
+	font-size: 25px;
+	text-align: center;
+}
+footer .confident
+{
+	font-size: 25px;
+	text-align: center;
+}
+/*-----------------------------------------------------about style-------------------------------*/
+.container
+{/*l'element container des autres elements*/
+    width: 35%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.324);
+    margin: 10% 35%;
+    padding: 10px;
+    justify-content: center;
+    position: relative;
+}
+.slider
+{ /*la mise en forme de cadre de bascule*/
+    width: 6vw;
+    height: 5vh;
+    background-color: yellow;
+    position: relative;
+    z-index: -1;
+    padding: 2px;
+    transition: all 0.5s;
+
+}
+.container input 
+{
+    display: none;/*faire disparaitre les inputs*/
+}
+.homeContainer,.aboutUsContainer,.skillsContainer,.contactContainer
+{
+    display: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.title
+{
+    font-size: 30px;
+    font-family: 'century','Times New Roman', Times, serif;
+}
+label.home,label.aboutUs,label.contact,label.skills/*faire ceci pour tout le label ayant les classes selectionnees*/
+{
+    font-size: 22px;/*la taille de la police sera de 22 par defaut*/
+    color: silver;/*la couleur de la police sera blanche*/
+    margin-left: 1.5rem;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
+}
+#home:checked ~ .labels  label.home, /*si l'input home est coché alors */ 
+#aboutUs:checked ~ .labels  label.aboutUs,
+#contact:checked ~ .labels  label.contact,
+#skills:checked ~ .labels  label.skills
+{ /*on va faire ceci*/
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+}
+#home:checked ~ .homeContainer /*tout le contenu de l'element seront afficher au click sur l'element*/
+{
+    display: block;
+    margin-top: -1.5rem;
+    color: white;
+}
+#home:checked ~ .homeContainer  .link_home a 
+{
+    font-size: 22px;
+    text-decoration: none;
+    color:black;
+}
+#home:checked ~ .homeContainer  .link_home
+{
+    width: 6vw;
+    height: auto;
+    background-color: yellow;
+    color:white;
+    padding: 5px;
+    margin: 15px 12.5rem;
+    text-align: center;
+}
+#home:checked ~ .homeContainer  .link_home:hover
+{
+    background-color: red;
+    color: white;
+}
+#aboutUs:checked ~ .aboutUsContainer
+{
+    display: block;
+    margin-top: -1.5rem;
+     color: white;
+}
+#contact:checked ~ .contactContainer
+{
+    display: block;
+    margin-top: -1.5rem;
+     color: white;
+}
+#skills:checked ~ .skillsContainer
+{
+    display: block;
+    margin-top: -1.5rem;
+     color: white;
+}
+
+#home:checked ~ .labels  .slider
+{
+    top: -2rem;
+    left:3.5%;
+    padding: 2px;
+}
+#aboutUs:checked ~ .labels  .slider
+{
+    width: 9vw;
+    top: -2rem;
+    left: 22.5%;
+    padding: 2px;
+}
+#contact:checked ~ .labels  .slider
+{
+    width: 7vw;
+    top: -2rem;
+    left: 50%;  
+}
+#skills:checked ~ .labels  .slider
+{
+    width: 6vw;
+    top: -2rem;
+    left: 71%;  
+}
+@media screen and (max-width:800px){
+    header
+    {
+        height: 50px;  
+        background-color : rgb(2,2,65);
+        position: relative;
+        text-align: center;
+        border-radius: 10px;
+    }
+    header::before
+    {   
+        content: none;
+    }
+     header::after
+    {   
+        content: none;
+    }
+    header span 
+    {
+         display: block;
+         font-size: 25px;
+         color: white;
+         margin-top: 10px;
+         text-align: center;
+         margin-right: 1rem;
+    }
+    .nav 
+    {
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        display: none;
+        right: 0rem;
+    } 
+
+     header.show
+    {
+        height: 30vh;
+        transition: all 0.5s;
+    }
+        header.show::before
+    {
+        content: "";
+        width: 100%;
+        height: 100%;  
+        background-color : rgb(2, 2, 65,0.8);
+        position: absolute;
+        left: 0px;
+    }
+    .nav.show 
+    {
+        display: flex;
+        margin-top: 1rem;
+    }
+
+     header.show span
+    {
+        color: yellow;
+    }
+    .toggle_bars
+    {
+        width: 2rem;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+    .bar 
+    {
+        width: 100%;
+        height: 5px;
+        margin-top: 2px;
+        background-color: yellow;
+        border-radius: 5px;
+        transition: all 0.5s;
+    }
+    header.show .B1
+    {
+        transform: rotate(50deg) translatey(10px);
+        background-color: yellow;
+    }
+    header.show .B2
+    {
+        display: none;
+    }
+     header.show .B3
+    {
+        transform: rotate(-50deg) translatey(-6px) translatex(-5px);
+        background-color: yellow;
+    }
+   section 
+   {
+    width: 100%;
+    height: 50vh;
+    background-size: cover;
+    background-position: 50% 100%; 
+    margin-top: -0rem;
+    background-image: url('Pictures/eleve_de_maternel.png');
+   } 
+
+   section .content 
+   {
+    width: 100%;
+    margin: 4.5rem 0px;
+    font-size: 18px;
+    margin-bottom: 1rem;
+    animation-name: none;
+   }
+    section .content span 
+   {
+    font-size: 25px;
+   }
+   .contentForm
+   {
+     width: 10rem;
+   }
+    .subscribeNotice
+{
+    width: 100%;
+    height: 70%;
+    font-size: 20px;
+    left: 0px;
+    display: none;
+
+}
+   .sectionContainer
+   {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+   }
+   .sectionContainer h2
+   {
+    width: 30vw;
+    padding: 10px;
+    border-radius: 50%;
+    position: relative;
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+   }
+   .sectionContainer .indication1
+   {
+     width: 2.5rem;
+     font-size: 20px;
+     left: 0px;
+     top: 25rem;
+   }
+   .sectionContainer .indication2
+   {
+     width: 2.5rem;
+     right: 0px;
+     font-size: 20px;
+     top: 25rem;
+   }
+   .firstSection,.secondSection,.thirdSection
+   {
+    width: 75%;
+    height: 75%;
+    margin-top: 1rem;
+    flex-direction: column;
+   }
+   .firstSection .firstSectionImage
+   {
+    width: 75vw;
+ 
+   }
+   .firstSectionContent
+   {
+    width: 100%;
+    height: auto;
+    padding-bottom: 10px;
+   }
+   .secondSection .secondSectionImage
+   {
+    width: 75vw;
+   }
+   .secondSectionContent
+   {
+    width: 100%;
+    height: auto;
+    padding-bottom: 10px;
+   }
+   .thirdSection .thirdSectionImage
+   {
+    width: 75vw;
+   }
+   .thirdSectionContent
+   {
+    width: 100%;
+    height: auto;
+    padding-bottom: 10px;
+   }
+   .optionsContainer
+    {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0px;
+   }
+   .optionsContainer h2
+   {
+    width: 35vw;
+    padding: 10px;
+    border-radius: 50%;
+    margin-bottom: 0px;
+    position: relative;
+   }
+   .optionsContainer > span 
+   {
+        width: 40%;
+        position: relative;
+        margin-top: -1rem;
+        margin-bottom: 2rem;
+   }
+  .Option.infOption .presentation
+  {
+    margin-top: 10px;
+    margin-left: 0px;
+  }
+   .optionsContainer .Option .formImage
+   {
+    margin-top: 1.5rem;
+    margin-left: 0px;
+   }
+   footer 
+   {
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+   }
+/*--------------------------------------------about style-----------------------------------*/
+    .container
+    {
+        width: 90%;
+        height: auto;
+        margin: 0px;
+        left: 0.5rem;
+        top: 15vh;
+    }
+    .slider
+    {
+        width: none;
+        background: none;
+    }
+    #home:checked ~ .labels  label.home, /*si l'input home est coché alors */ 
+    #aboutUs:checked ~ .labels  label.aboutUs,
+    #contact:checked ~ .labels  label.contact,
+    #skills:checked ~ .labels  label.skills
+    { /*on va faire ceci*/
+        color: yellow;
+         
+    }
+    #home:checked ~ .homeContainer  .link_home
+{
+    width: 8.5rem;
+    height: auto;
+    padding: 5px;
+    margin: 15px 6rem;
+}
+    label.home,label.aboutUs,label.contact,label.skills/*faire ceci pour tout le label ayant les classes selectionnees*/
+{
+    font-size: 22px;/*la taille de la police sera de 22 par defaut*/
+    color: silver;/*la couleur de la police sera blanche*/
+    margin-left: 1rem;
+}
+     
+}
