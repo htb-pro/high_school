@@ -718,7 +718,7 @@ label.home,label.aboutUs,label.contact,label.skills/*faire ceci pour tout le lab
    section .content 
    {
     width: 75%;
-    margin: 2.5rem 0px;
+    margin: 0.5rem 0px;
     font-size: 18px;
     margin-bottom: 1rem;
     animation-name: none;
