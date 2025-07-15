@@ -717,8 +717,8 @@ label.home,label.aboutUs,label.contact,label.skills/*faire ceci pour tout le lab
 
    section .content 
    {
-    width: 100%;
-    margin: 4.5rem 0px;
+    width: 75%;
+    margin: 2.5rem 0px;
     font-size: 18px;
     margin-bottom: 1rem;
     animation-name: none;
@@ -758,16 +758,21 @@ label.home,label.aboutUs,label.contact,label.skills/*faire ceci pour tout le lab
    }
    .sectionContainer .indication1
    {
-     width: 2.5rem;
-     font-size: 20px;
+     width: 2rem;
+     font-size: 50px;
+     font-weight: bold;
      left: 0px;
      top: 25rem;
    }
    .sectionContainer .indication2
    {
-     width: 2.5rem;
+     width: 2rem;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-size: 50px;
+     font-weight: bold;
      right: 0px;
-     font-size: 20px;
      top: 25rem;
    }
    .firstSection,.secondSection,.thirdSection
